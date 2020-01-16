@@ -1,4 +1,3 @@
-//Servidor
 require('./config/config');
 
 const express = require('express');
@@ -19,7 +18,7 @@ app.use(require('./routes/usuario'));
 
 //Database
 
-mongoose.connect('mongodb+srv://gkitas10:kx40PfCGLb2vmDPg@cluster0-wrfnm.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true},(err,res)=>{
+mongoose.connect(process.env.MONGO_URI,{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true},(err,res)=>{
     if(err) throw err;
     console.log('conexión exitosa con la DB');
 });
