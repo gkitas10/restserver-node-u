@@ -4,6 +4,20 @@ const Usuario=require('../models/usuario');
 const bcrypt=require('bcrypt');
 const _=require('underscore');
 
+app.get('/',function(req, res){
+
+    if(err){
+        res.status(400).json({
+            ok:false,
+            err
+        });
+        res.json({
+            ok:true,
+            message:'mi app'
+        });
+    }
+});
+
 app.get('/usuario', function(req, res) {
 
     let desde=req.query.desde||0;
@@ -16,7 +30,7 @@ app.get('/usuario', function(req, res) {
                     .limit(limite)
                     .exec((err,usuarios)=>{
                         if(err){
-                            res.status(400).json({
+                            return res.status(400).json({
                                 ok:false,
                                 err
                             });
@@ -70,7 +84,7 @@ app.put('/usuario/:id', function(req, res) {
     Usuario.findByIdAndUpdate(id,body,{new:true,runValidators:true},(err,usuarioDB)=>{
 
         if(err){
-            res.status(400).json({
+           return res.status(400).json({
                 err
             });
         }
