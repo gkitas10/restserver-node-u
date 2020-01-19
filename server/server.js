@@ -18,10 +18,10 @@ app.use(require('./routes/usuario'));
 
 //Database
 
-/*mongoose.connect(process.env.URLDB,{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true},(err,res)=>{
+mongoose.connect(process.env.URLDB,{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true},(err,res)=>{
     if(err) throw err;
     console.log('conexión exitosa con la DB');
-});*/
+});
 
 //Servidor escuchando
 app.listen(process.env.PORT, () => {

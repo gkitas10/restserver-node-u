@@ -6,16 +6,12 @@ const _=require('underscore');
 
 app.get('/',function(req, res){
 
-    if(err){
-        return res.status(400).json({
-            ok:false,
-            err
-        });
+    
         res.json({
             ok:true,
             message:'mi app'
         });
-    }
+    
 });
 
 app.get('/usuario', function(req, res) {
