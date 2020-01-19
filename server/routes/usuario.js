@@ -7,7 +7,7 @@ const _=require('underscore');
 app.get('/',function(req, res){
 
     if(err){
-        res.status(400).json({
+        return res.status(400).json({
             ok:false,
             err
         });
