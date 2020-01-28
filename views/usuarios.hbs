@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav id="navbar">
+    <ul>
+        
+        <li><a href="/usuarios">Usuarios</a></li>
+        <li><a>Categorias</a></li>
+        <li><a>Productos</a></li>
+      </ul>
+    <div>
+        <div id="form-container">
+            <form id="create-user-form" method="POST" action="/usuario">
+                <label for="nombre">Nombre</label>
+                <input type=text name="nombre">
+                <label for=email>Email</label>
+                <input type="email" name="email">
+                <label for="password">password</label>
+                <input type="password" name="password">
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    margin: 0;
+    background:#283360;
+}
+#navbar{
+    background: #0082e6;
+    width: 100%;
+    height: 125px; 
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 200px;
+    padding: 50px;
+}
+nav ul li a{
+    font-size: 30px;
+    font-family: Helvetica,Arial;
+    color: white;
+}
+#form-container{
+    margin-left: 45%;
+}
+#create-user-form input{
+    display: block;
+    margin-top: 10px;
+}
+label{
+    color: white;
+}
+
+

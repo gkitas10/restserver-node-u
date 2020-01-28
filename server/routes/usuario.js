@@ -5,15 +5,9 @@ const {verificaToken,verificaAdmin_role}=require('../middlewares/autenticacion')
 const bcrypt=require('bcrypt');
 const _=require('underscore');
 
-app.get('/',function(req, res){
 
     
-        res.json({
-            ok:true,
-            message:'mi app'
-        });
-    
-});
+
 
 app.get('/usuario',verificaToken,function(req, res) {
 
@@ -77,6 +71,7 @@ app.post('/usuario',[verificaToken,verificaAdmin_role],function(req, res) {
 app.put('/usuario/:id',[verificaToken,verificaAdmin_role],function(req, res) {
 
     let id = req.params.id;
+    //propiedades que si quiero que se puedan actualizar
     let body=_.pick(req.body,['nombre','email','img','role','estado']);
 
     Usuario.findByIdAndUpdate(id,body,{new:true,runValidators:true},(err,usuarioDB)=>{
